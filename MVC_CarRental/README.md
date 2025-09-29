@@ -203,11 +203,14 @@ MVC_CarRental/                 # Main ASP.NET Core MVC project
 
 **📝 Note:** Screenshots will be added after uploading to GitHub Issues. The placeholder URLs will be replaced with actual GitHub-hosted image links.
 
-**Alternative: Direct file access**
-- [Create Customer Screenshot](ScreenShots/Create-Customers.png)
-- [Customer Index Screenshot](ScreenShots/Customer-Index.png)
-- [Update Customer Screenshot](ScreenShots/Update-Customers.png)
-- [Delete Customer Screenshot](ScreenShots/Delete-Customers.png)
+**📁 Screenshots Klasörü:**
+Screenshots klasörüne aşağıdaki görselleri eklemeniz gerekiyor:
+- `customer-create.png` - Müşteri oluşturma formu
+- `customer-list.png` - Müşteri listesi sayfası  
+- `customer-edit.png` - Müşteri düzenleme formu
+- `customer-delete.png` - Müşteri silme onay sayfası
+
+**📝 Not:** Görseller eklendikten sonra README otomatik olarak güncellenecektir.
 
 ### Key Features Demonstrated
 
