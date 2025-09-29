@@ -1,32 +1,34 @@
 ﻿# 🚗 MVC Car Rental: A Car Rental Management System
 
-**MVC Car Rental** is a comprehensive car rental management system developed using **ASP.NET MVC** and **Entity Framework**. This project provides a web-based solution for managing cars, customers, rental transactions, and users. It features integrated **FluentValidation** to enforce business rules and ensure data integrity.
+**MVC Car Rental** is a comprehensive car rental management system developed using **ASP.NET Core MVC** and **Entity Framework Core**. This project provides a web-based solution for managing cars, customers, rental transactions, and users. It features integrated **FluentValidation** to enforce business rules and ensure data integrity.
+
+Built with **.NET 9.0** and modern web development practices.
 
 ---
 
 ## ✨ Key Features
 
-* **Comprehensive Management:** Easily manage customers(Create,Read,Update and Delete)
-* **Smart Search and Filtering:** Quickly search and filter cars by availability, category, and brand.
-* **Role-Based Authorization:** Secure authentication and authorization for different user roles, such as administrators and customers.
-* **Robust Data Validation:** Utilizes the **FluentValidation** library to guarantee consistent and secure data entry.
-* **Clean Architecture:** An entity-based domain model following clean architecture principles.
-* **User-Friendly Interface:** A simple and interactive user interface built with **Razor Views**.
-* **Scalable Architecture:** A maintainable and scalable **ASP.NET MVC** architecture.
+* **Comprehensive Management:** Easily manage customers (Create, Read, Update, Delete)
+* **Entity-Based Domain Model:** Clean architecture with well-defined entities (Brand, Series, Vehicle, Customer, Employee, Office, Rental)
+* **Smart Data Validation:** Utilizes **FluentValidation** library for robust input validation
+* **Database-First Approach:** Entity Framework Core with SQL Server integration
+* **Modern UI:** Responsive Razor Views with clean user interface
+* **Scalable Architecture:** Maintainable ASP.NET Core MVC architecture following best practices
+* **Code-First Migrations:** Database schema management with EF Core migrations
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Category | Technology | Description |
-|---|---|---|
-| **Framework** | ASP.NET MVC | Microsoft's popular Model-View-Controller framework for web applications. |
-| **Language** | C# | The back-end logic of the project is written in C#. |
-| **ORM** | Entity Framework | An Object-Relational Mapping (ORM) tool used for database operations. |
-| **Validation** | FluentValidation | A library for building more readable and robust validation rules. |
-| **Frontend** | Razor Views, HTML5, CSS3, JavaScript | Technologies used for the user interface and client-side interactions. |
-| **Database** | Microsoft SQL Server | The relational database management system where all project data is stored. |
-| **IDE** | Visual Studio 2022+ | The integrated development environment where the project is developed. |
+| Category | Technology | Version | Description |
+|---|---|---|---|
+| **Framework** | ASP.NET Core MVC | 9.0 | Microsoft's modern Model-View-Controller framework |
+| **Language** | C# | 12.0 | Primary programming language |
+| **ORM** | Entity Framework Core | 9.0.9 | Modern ORM for database operations |
+| **Validation** | FluentValidation | 12.0.0 | Robust validation library |
+| **Database** | SQL Server | Latest | Primary database system |
+| **Frontend** | Razor Views, HTML5, CSS3 | - | Server-side rendering with modern web standards |
+| **IDE** | Visual Studio 2022+ | - | Recommended development environment |
 
 ---
 
@@ -34,37 +36,55 @@
 
 The system is structured around the following main entities:
 
-* **Car:** Represents vehicles available for rental. (e.g., Model, Brand, Daily Price, License Plate)
-* **Customer:** Holds customer information. (e.g., Name, Email, Phone Number)
-* **Rental:** Stores rental transactions and history. (e.g., Start/End Date, Total Amount)
-* **User:** Manages application users (admins, customers, etc.).
-* **Category:** Organizes cars by type. (e.g., Sedan, SUV, Hatchback)
-* **Brand:** Specifies the brand of the cars. (e.g., BMW, Mercedes, Toyota)
+* **Brand:** Car manufacturers (e.g., BMW, Mercedes, Toyota, Ford)
+* **Series:** Vehicle model series within brands (e.g., BMW X5, Mercedes C-Class)
+* **Vehicle:** Individual cars available for rental with specifications
+* **Customer:** Customer information and contact details
+* **Employee:** Staff members managing rentals and operations
+* **Office:** Branch locations where vehicles are managed
+* **Rental:** Rental transactions and booking history
+* **BaseEntity:** Common properties for all entities (Id, CreatedDate, etc.)
 
 ---
 
 ## 🧾 Validation Layer
 
-Validation rules are implemented with **FluentValidation** to guarantee consistent and secure data entry. Example validation rules include:
+Validation rules are implemented with **FluentValidation** to guarantee consistent and secure data entry:
 
-Validation rules are implemented with FluentValidation to guarantee consistent and secure data entry. Example validation rules include:
-
-Customer Details: Validating the format of the name, email, and phone number.
+* **Customer Validation:** Name format, email validation, phone number format
+* **Extensible Design:** Easy to add validation rules for other entities
+* **Server-Side Validation:** Ensures data integrity at the application level
 
 ---
 
 ## 📂 Project Structure
 
-The project's main directory structure is as follows:
-MVC_CarRental.sln           # Solution file
-MVC_CarRental/              # Main ASP.NET MVC project
-├── Controllers/            # Application controllers
-├── Models/                 # Domain models (Car, Customer, Rental, etc.)
-├── Validators/             # FluentValidation classes
-├── Views/                  # Razor views (UI templates)
-├── Scripts/                # JavaScript files
-├── Content/                # CSS, images, and static assets
-└── Web.config              # Project configuration
+```
+MVC_CarRental.sln              # Solution file
+MVC_CarRental/                 # Main ASP.NET Core MVC project
+├── Controllers/               # Application controllers
+│   └── CustomersController.cs # Customer management controller
+├── Models/                    # Domain models
+│   ├── BaseEntity.cs         # Base entity class
+│   ├── Brand.cs              # Brand entity
+│   ├── Series.cs             # Series entity
+│   ├── Vehicle.cs            # Vehicle entity
+│   ├── Customer.cs           # Customer entity
+│   ├── Employee.cs           # Employee entity
+│   ├── Office.cs             # Office entity
+│   ├── Rental.cs             # Rental entity
+│   └── Enums/                # Enumeration types
+├── Data/                      # Data access layer
+│   └── ApplicationDbContext.cs # Entity Framework context
+├── Mappings/                  # Entity configurations
+├── Validators/                # FluentValidation classes
+├── Extentions/                # Extension methods
+├── Views/                     # Razor views (UI templates)
+├── Migrations/                # Entity Framework migrations
+├── ScreenShots/               # Application screenshots
+├── appsettings.json          # Application configuration
+└── Program.cs                # Application entry point
+```
 
 ---
 
@@ -72,54 +92,112 @@ MVC_CarRental/              # Main ASP.NET MVC project
 
 ### Prerequisites
 
-* Visual Studio 2022 (or later)
-* .NET Framework 4.7.2+
-* SQL Server
+* **Visual Studio 2022** (or later) or **Visual Studio Code**
+* **.NET 9.0 SDK**
+* **SQL Server** (LocalDB, Express, or Full Edition)
+* **Git** (for cloning the repository)
 
 ### Installation Steps
 
-1.  Clone this repository to your local machine:
-    ```bash
-    git clone [https://github.com/dugerdev/MVC_CarRental.git](https://github.com/your-username/MVC_CarRental.git)
-    ```
-2.  Open the `MVC_CarRental.sln` file in Visual Studio.
-3.  Restore NuGet packages:
-    * `Tools > NuGet Package Manager > Restore Packages`
-4.  Set up the database:
-    * Update the SQL Server connection string in the `Web.config` file to match your database settings.
-    * If using the Entity Framework Code First approach, run the necessary migrations.
-5.  Build and run the project:
-    * Press `Ctrl + F5` to start the application.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-username/MVC_CarRental.git
+   cd MVC_CarRental
+   ```
+
+2. **Open the solution:**
+   ```bash
+   # Using Visual Studio
+   start MVC_CarRental.sln
+   
+   # Or using VS Code
+   code .
+   ```
+
+3. **Restore NuGet packages:**
+   ```bash
+   dotnet restore
+   ```
+
+4. **Configure the database:**
+   - Update the connection string in `appsettings.json`:
+   ```json
+   {
+     "ConnectionStrings": {
+       "DbConn": "Server=(localdb)\\mssqllocaldb;Database=CarRentalDB;Trusted_Connection=true;MultipleActiveResultSets=true"
+     }
+   }
+   ```
+
+5. **Run database migrations:**
+   ```bash
+   dotnet ef database update
+   ```
+
+6. **Build and run the application:**
+   ```bash
+   dotnet build
+   dotnet run
+   ```
+
+7. **Access the application:**
+   - Open your browser and navigate to `https://localhost:5001` or `http://localhost:5000`
 
 ---
 
 ## 📸 Screenshots
-![Create For Customers](ScreenShots/Create.png)
 
----
+### Customer Management Interface
 
-![Index For Customers](ScreenShots/Index.png)
+![Create Customer](ScreenShots/Create.png)
+*Creating a new customer record*
 
----
+![Customer Index](ScreenShots/Index.png)
+*Customer listing and management*
 
-![Update For Customers](ScreenShots/Update.png)
+![Update Customer](ScreenShots/Update.png)
+*Editing customer information*
 
----
-
-![Delete For Customers](ScreenShots/Delete.png)
+![Delete Customer](ScreenShots/Delete.png)
+*Customer deletion confirmation*
 
 ## 🤝 Contributing
 
 Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
 
-1.  Fork the repository.
-2.  Create a new branch (`feature/new-feature`).
-3.  Commit your changes.
-4.  Push to the branch.
-5.  Open a Pull Request.
+1. **Fork the repository**
+2. **Create a feature branch:** `git checkout -b feature/new-feature`
+3. **Commit your changes:** `git commit -m 'Add some feature'`
+4. **Push to the branch:** `git push origin feature/new-feature`
+5. **Submit a pull request**
+
+### Development Guidelines
+
+- Follow C# coding conventions
+- Write meaningful commit messages
+- Add appropriate validation for new features
+- Update documentation as needed
+- Test your changes thoroughly
 
 ---
 
 ## 📄 License
 
-This project is licensed under the MIT License – see the `LICENSE` file for details.
+This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 👨‍💻 Author
+
+**Muhammad Duger**
+- GitHub: [@dugerdev](https://github.com/dugerdev)
+- LinkedIn: [Muhammad Duger](https://linkedin.com/in/muhammad-duger)
+
+---
+
+## 🙏 Acknowledgments
+
+- Built with ASP.NET Core MVC
+- Entity Framework Core for data access
+- FluentValidation for input validation
+- Modern web development practices
