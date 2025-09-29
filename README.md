@@ -101,23 +101,6 @@ MVC_CarRental/              # Main ASP.NET MVC project
 
 ---
 
-## 📸 Screenshots
-
-### Customer Management
-![Create For Customers](ScreenShots/Create.png)
-*Creating a new customer record*
-
-![Index For Customers](ScreenShots/Index.png)
-*Customer listing with search and filter options*
-
-![Update For Customers](ScreenShots/Update.png)
-*Updating customer information*
-
-![Delete For Customers](ScreenShots/Delete.png)
-*Deleting customer records*
-
----
-
 ## 🔧 Usage
 
 ### For Administrators
