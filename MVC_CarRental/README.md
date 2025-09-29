@@ -183,16 +183,16 @@ MVC_CarRental/                 # Main ASP.NET Core MVC project
 
 ### Customer Management Interface
 
-![Create Customer](ScreenShots/Create-Customers.png)
+![Create Customer](MVC_CarRental/ScreenShots/Create-Customers.png)
 *Creating a new customer record with comprehensive validation*
 
-![Customer Index](ScreenShots/Customer-Index.png)
+![Customer Index](MVC_CarRental/ScreenShots/Customer-Index.png)
 *Customer listing and management with full CRUD operations*
 
-![Update Customer](ScreenShots/Update-Customers.png)
+![Update Customer](MVC_CarRental/ScreenShots/Update-Customers.png)
 *Editing customer information with duplicate validation*
 
-![Delete Customer](ScreenShots/Delete-Customers.png)
+![Delete Customer](MVC_CarRental/ScreenShots/Delete-Customers.png)
 *Customer deletion confirmation with safety checks*
 
 ### Key Features Demonstrated
