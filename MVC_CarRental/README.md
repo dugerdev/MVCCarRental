@@ -88,25 +88,50 @@ The application comes with pre-seeded data:
 
 ## 📸 Screenshots
 
-### Customer Management Interface
+### 🎯 Application Interface Overview
 
-The following screenshots demonstrate the key features of the customer management system:
+This section showcases the key features and user interface of the MVC Car Rental System. The screenshots demonstrate the complete customer management workflow with modern, responsive design.
 
-#### Customer List View
+---
+
+### 👥 Customer Management System
+
+#### 📋 Customer List View
 ![Customer List](ScreenShots/Customer-list.png)
-*Customer listing and management with full CRUD operations and search functionality*
+*Comprehensive customer listing with search, filter, and management capabilities. Features include pagination, sorting, and quick action buttons for each customer record.*
 
-#### Create Customer
+#### ➕ Create New Customer
 ![Create Customer](ScreenShots/Customer-create.png)
-*Creating a new customer record with comprehensive validation and duplicate checking*
+*Intuitive customer creation form with real-time validation, duplicate checking, and user-friendly error messages. The form includes comprehensive field validation for Turkish characters.*
 
-#### Edit Customer
+#### ✏️ Edit Customer Information
 ![Edit Customer](ScreenShots/customer-edit.png)
-*Editing customer information with real-time validation and error handling*
+*Customer information editing interface with pre-populated fields, validation feedback, and seamless update functionality. Includes duplicate prevention and data integrity checks.*
 
-#### Delete Customer
+#### 🗑️ Delete Customer Confirmation
 ![Delete Customer](ScreenShots/Customer-delete.png)
-*Customer deletion confirmation with safety checks and soft delete implementation*
+*Safe customer deletion process with confirmation dialog, soft delete implementation, and audit trail maintenance. Ensures data integrity while providing user safety.*
+
+---
+
+### 🎨 UI/UX Features Demonstrated
+
+- **Modern Design**: Clean, professional interface with Bootstrap styling
+- **Responsive Layout**: Works seamlessly across desktop, tablet, and mobile devices
+- **Form Validation**: Real-time validation with clear error messaging
+- **User Feedback**: Intuitive success/error notifications
+- **Data Integrity**: Comprehensive validation and duplicate prevention
+- **Accessibility**: User-friendly interface with clear navigation
+
+---
+
+### 🔧 Technical Features Showcased
+
+- **CRUD Operations**: Complete Create, Read, Update, Delete functionality
+- **FluentValidation**: Advanced validation rules with Turkish character support
+- **Soft Delete**: Safe data deletion with audit trail
+- **Search & Filter**: Advanced data filtering and search capabilities
+- **Error Handling**: Comprehensive error management and user feedback
 
 ## 🆕 Recent Updates
 
