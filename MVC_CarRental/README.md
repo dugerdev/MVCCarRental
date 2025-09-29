@@ -1,157 +1,106 @@
-﻿# 🚗 MVC Car Rental: A Car Rental Management System
+﻿# MVC Car Rental System
 
-**MVC Car Rental** is a comprehensive car rental management system developed using **ASP.NET Core MVC** and **Entity Framework Core**. This project provides a web-based solution for managing cars, customers, rental transactions, and users. It features integrated **FluentValidation** to enforce business rules and ensure data integrity.
+A comprehensive car rental management system built with .NET 9.0 MVC framework.
 
-Built with **.NET 9.0** and modern web development practices.
+## 🚀 Features
 
----
-
-## ✨ Key Features
-
-* **Comprehensive CRUD Operations:** Complete customer management with Create, Read, Update, Delete functionality
-* **Entity-Based Domain Model:** Clean architecture with well-defined entities (Brand, Series, Vehicle, Customer, Employee, Office, Rental)
-* **Smart Data Validation:** Advanced validation using **FluentValidation** with Turkish character support
-* **Database Seeding:** Automatic population of sample data for testing and demonstration
-* **Modern UI:** Responsive Razor Views with clean, user-friendly interface
-* **Scalable Architecture:** Maintainable ASP.NET Core MVC architecture following best practices
-* **Code-First Migrations:** Database schema management with EF Core migrations
-* **Audit Trail:** Built-in tracking of creation, update, and deletion timestamps
-* **Soft Delete Support:** Safe deletion with recovery capabilities
-* **Professional Code Quality:** Comprehensive XML documentation and clean code practices
-
----
+- **Customer Management**: Full CRUD operations with validation
+- **Vehicle Management**: Brand, series, and vehicle tracking
+- **Employee Management**: Staff and office management
+- **Rental Operations**: Complete rental workflow
+- **Advanced Validation**: FluentValidation with Turkish character support
+- **Database Seeding**: Pre-populated with realistic sample data
+- **Responsive Design**: Modern, clean interface
 
 ## 🛠️ Tech Stack
 
-| Category | Technology | Version | Description |
-|---|---|---|---|
-| **Framework** | ASP.NET Core MVC | 9.0 | Microsoft's modern Model-View-Controller framework |
-| **Language** | C# | 12.0 | Primary programming language |
-| **ORM** | Entity Framework Core | 9.0.9 | Modern ORM for database operations |
-| **Validation** | FluentValidation | 12.0.0 | Robust validation library |
-| **Database** | SQL Server | Latest | Primary database system |
-| **Frontend** | Razor Views, HTML5, CSS3 | - | Server-side rendering with modern web standards |
-| **IDE** | Visual Studio 2022+ | - | Recommended development environment |
+- **.NET 9.0** - Latest framework version
+- **ASP.NET Core MVC** - Web application framework
+- **Entity Framework Core** - ORM for database operations
+- **SQL Server** - Database management
+- **FluentValidation** - Advanced validation rules
+- **Bootstrap** - Responsive UI framework
 
----
+## 📋 Prerequisites
 
-## 📂 Entities (Domain Models)
+- .NET 9.0 SDK
+- SQL Server (LocalDB or Express)
+- Visual Studio 2022 or VS Code
 
-The system is structured around the following main entities:
-
-* **Brand:** Car manufacturers (e.g., BMW, Mercedes, Toyota, Ford)
-* **Series:** Vehicle model series within brands (e.g., BMW X5, Mercedes C-Class)
-* **Vehicle:** Individual cars available for rental with specifications
-* **Customer:** Customer information and contact details
-* **Employee:** Staff members managing rentals and operations
-* **Office:** Branch locations where vehicles are managed
-* **Rental:** Rental transactions and booking history
-* **BaseEntity:** Common properties for all entities (Id, CreatedDate, etc.)
-
----
-
-## 🧾 Validation Layer
-
-Advanced validation rules implemented with **FluentValidation** for robust data integrity:
-
-* **Customer Validation:** 
-  - National ID: 11-digit Turkish format validation
-  - Names: Turkish character support with length validation
-  - Email: Comprehensive email format validation
-  - Phone: Turkish phone number format (+90 555 123 4567)
-* **Extensible Design:** Easy to add validation rules for other entities
-* **Server-Side Validation:** Ensures data integrity at the application level
-* **User-Friendly Messages:** Clear, descriptive error messages in English
-
----
-
-## 📂 Project Structure
-
-```
-MVC_CarRental.sln              # Solution file
-MVC_CarRental/                 # Main ASP.NET Core MVC project
-├── Controllers/               # Application controllers
-│   └── CustomersController.cs # Customer management controller
-├── Models/                    # Domain models
-│   ├── BaseEntity.cs         # Base entity class
-│   ├── Brand.cs              # Brand entity
-│   ├── Series.cs             # Series entity
-│   ├── Vehicle.cs            # Vehicle entity
-│   ├── Customer.cs           # Customer entity
-│   ├── Employee.cs           # Employee entity
-│   ├── Office.cs             # Office entity
-│   ├── Rental.cs             # Rental entity
-│   └── Enums/                # Enumeration types
-├── Data/                      # Data access layer
-│   └── ApplicationDbContext.cs # Entity Framework context
-├── Mappings/                  # Entity configurations
-├── Validators/                # FluentValidation classes
-├── Extentions/                # Extension methods
-├── Views/                     # Razor views (UI templates)
-├── Migrations/                # Entity Framework migrations
-├── ScreenShots/               # Application screenshots
-├── appsettings.json          # Application configuration
-└── Program.cs                # Application entry point
-```
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-* **Visual Studio 2022** (or later) or **Visual Studio Code**
-* **.NET 9.0 SDK**
-* **SQL Server** (LocalDB, Express, or Full Edition)
-* **Git** (for cloning the repository)
-
-### Installation Steps
+## 🚀 Installation & Setup
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/MVC_CarRental.git
+   git clone https://github.com/dugerdev/MvcCarRental.git
+   cd MvcCarRental
+   ```
+
+2. **Navigate to project directory:**
+   ```bash
    cd MVC_CarRental
    ```
 
-2. **Open the solution:**
-   ```bash
-   # Using Visual Studio
-   start MVC_CarRental.sln
-   
-   # Or using VS Code
-   code .
-   ```
-
-3. **Restore NuGet packages:**
+3. **Restore dependencies:**
    ```bash
    dotnet restore
    ```
 
-4. **Configure the database:**
-   - Update the connection string in `appsettings.json`:
-   ```json
-   {
-     "ConnectionStrings": {
-       "DbConn": "Server=(localdb)\\mssqllocaldb;Database=CarRentalDB;Trusted_Connection=true;MultipleActiveResultSets=true"
-     }
-   }
-   ```
-
-5. **Run database migrations:**
+4. **Update database:**
    ```bash
    dotnet ef database update
    ```
 
-6. **Build and run the application:**
+5. **Run the application:**
    ```bash
-   dotnet build
    dotnet run
    ```
 
-7. **Access the application:**
+6. **Access the application:**
    - Open your browser and navigate to `https://localhost:5001` or `http://localhost:5000`
 
----
+## 📊 Database Schema
+
+### Entities
+
+- **BaseEntity**: Common properties (Id, IsDeleted, CreatedOn, UpdatedOn, DeletedOn)
+- **Customer**: Customer information with validation
+- **Vehicle**: Vehicle details with brand and series relationships
+- **Brand**: Vehicle manufacturer information
+- **Series**: Vehicle model information
+- **Employee**: Staff management
+- **Office**: Office locations
+- **Rental**: Rental transaction records
+
+### Sample Data
+
+The application comes with pre-seeded data:
+- 8 Brands (Toyota, BMW, Mercedes, etc.)
+- 18 Series (Corolla, X5, C-Class, etc.)
+- 18 Vehicles with various specifications
+- 15 Sample customers
+- 5 Employees
+- 5 Office locations
+- 8 Sample rental records
+
+## 📸 Screenshots
+
+### Customer Management Interface
+
+#### Create Customer
+![Create Customer](https://github.com/dugerdev/MvcCarRental/issues/1#issuecomment-create)
+*Creating a new customer record with comprehensive validation*
+
+#### Customer Index
+![Customer Index](https://github.com/dugerdev/MvcCarRental/issues/1#issuecomment-index)
+*Customer listing and management with full CRUD operations*
+
+#### Update Customer
+![Update Customer](https://github.com/dugerdev/MvcCarRental/issues/1#issuecomment-update)
+*Editing customer information with duplicate validation*
+
+#### Delete Customer
+![Delete Customer](https://github.com/dugerdev/MvcCarRental/issues/1#issuecomment-delete)
+*Customer deletion confirmation with safety checks*
 
 ## 🆕 Recent Updates
 
@@ -177,74 +126,64 @@ MVC_CarRental/                 # Main ASP.NET Core MVC project
   - Improved error handling and validation flow
   - Better separation between create and update operations
 
----
-
-## 📸 Screenshots
-
-### Customer Management Interface
-
-### Customer Management Interface
-
-#### Create Customer
-<img src="https://raw.githubusercontent.com/dugerdev/MvcCarRental/master/MVC_CarRental/Screenshots/Customer-create.png" alt="Create Customer" width="800"/>
-*Creating a new customer record with comprehensive validation*
-
-#### Customer Index  
-<img src="https://raw.githubusercontent.com/dugerdev/MvcCarRental/master/MVC_CarRental/Screenshots/Customer-list.png" alt="Customer Index" width="800"/>
-*Customer listing and management with full CRUD operations*
-
-#### Update Customer
-<img src="https://raw.githubusercontent.com/dugerdev/MvcCarRental/master/MVC_CarRental/Screenshots/customer-edit.png" alt="Update Customer" width="800"/>
-*Editing customer information with duplicate validation*
-
-#### Delete Customer
-<img src="https://raw.githubusercontent.com/dugerdev/MvcCarRental/master/MVC_CarRental/Screenshots/Customer-delete.png" alt="Delete Customer" width="800"/>
-*Customer deletion confirmation with safety checks*
-
-### Key Features Demonstrated
+## 🔧 Key Features Demonstrated
 
 - **Responsive Design:** Clean, modern interface that works on all devices
 - **Form Validation:** Real-time validation with user-friendly error messages
-- **Data Integrity:** Duplicate prevention for email, phone, and national ID
-- **Professional UI:** Bootstrap-based styling with intuitive navigation
+- **CRUD Operations:** Complete Create, Read, Update, Delete functionality
+- **Duplicate Prevention:** Advanced duplicate checking for customers
+- **Soft Delete:** Safe deletion with IsDeleted flag
+- **Audit Trail:** CreatedOn, UpdatedOn, DeletedOn tracking
+
+## 📁 Project Structure
+
+```
+MVC_CarRental/
+├── Controllers/          # MVC Controllers
+├── Models/              # Entity Models
+├── Views/               # Razor Views
+├── Data/                # DbContext and Seeders
+├── Validators/          # FluentValidation Rules
+├── Screenshots/         # Application Screenshots
+└── wwwroot/            # Static Files
+```
 
 ## 🤝 Contributing
 
-Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-1. **Fork the repository**
-2. **Create a feature branch:** `git checkout -b feature/new-feature`
-3. **Commit your changes:** `git commit -m 'Add some feature'`
-4. **Push to the branch:** `git push origin feature/new-feature`
-5. **Submit a pull request**
+## 📝 License
 
-### Development Guidelines
-
-- Follow C# coding conventions
-- Write meaningful commit messages
-- Add appropriate validation for new features
-- Update documentation as needed
-- Test your changes thoroughly
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
-
----
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 👨‍💻 Author
 
-**Muhammad Duger**
-- GitHub: [@dugerdev](https://github.com/dugerdev)
-- LinkedIn: [Muhammad Duger](https://linkedin.com/in/muhammad-duger)
+**dugerdev** - [GitHub Profile](https://github.com/dugerdev)
+
+## 📞 Contact
+
+For questions or support, please open an issue on GitHub.
 
 ---
 
-## 🙏 Acknowledgments
+## 🚨 IMPORTANT: Screenshots Setup
 
-- Built with ASP.NET Core MVC
-- Entity Framework Core for data access
-- FluentValidation for input validation
-- Modern web development practices
+To add screenshots to this README:
+
+1. Go to [Issues](https://github.com/dugerdev/MvcCarRental/issues)
+2. Create a new issue titled "Screenshots"
+3. Upload your images by dragging and dropping them into the issue
+4. GitHub will generate URLs like: `https://user-images.githubusercontent.com/xxxxx/xxxxx.png`
+5. Replace the placeholder URLs in this README with the generated URLs
+
+**Screenshot files needed:**
+- Customer creation form
+- Customer listing page
+- Customer editing form
+- Customer deletion confirmation
+
+This method ensures screenshots display reliably on GitHub!
