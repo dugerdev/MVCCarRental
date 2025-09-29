@@ -158,7 +158,13 @@ MVC_CarRental/
 
 ## 📝 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](../LICENSE) file for details.
+
+**MIT License Summary:**
+- ✅ Free to use for personal and commercial projects
+- ✅ Free to modify and distribute
+- ✅ Free to sell
+- ✅ Only requirement: Include the original license and copyright notice
 
 ## 👨‍💻 Author
 
