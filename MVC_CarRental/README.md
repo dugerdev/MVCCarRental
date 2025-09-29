@@ -97,19 +97,19 @@ This section showcases the key features and user interface of the MVC Car Rental
 ### 👥 Customer Management System
 
 #### 📋 Customer List View
-![Customer List](ScreenShots/Customer-list.png)
+![Customer List](./ScreenShots/Customer-list.png)
 *Comprehensive customer listing with search, filter, and management capabilities. Features include pagination, sorting, and quick action buttons for each customer record.*
 
 #### ➕ Create New Customer
-![Create Customer](ScreenShots/Customer-create.png)
+![Create Customer](./ScreenShots/Customer-create.png)
 *Intuitive customer creation form with real-time validation, duplicate checking, and user-friendly error messages. The form includes comprehensive field validation for Turkish characters.*
 
 #### ✏️ Edit Customer Information
-![Edit Customer](ScreenShots/customer-edit.png)
+![Edit Customer](./ScreenShots/customer-edit.png)
 *Customer information editing interface with pre-populated fields, validation feedback, and seamless update functionality. Includes duplicate prevention and data integrity checks.*
 
 #### 🗑️ Delete Customer Confirmation
-![Delete Customer](ScreenShots/Customer-delete.png)
+![Delete Customer](./ScreenShots/Customer-delete.png)
 *Safe customer deletion process with confirmation dialog, soft delete implementation, and audit trail maintenance. Ensures data integrity while providing user safety.*
 
 ---
