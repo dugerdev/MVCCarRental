@@ -92,19 +92,21 @@ The application comes with pre-seeded data:
 
 The following screenshots demonstrate the key features of the customer management system:
 
-#### Create Customer
-*Creating a new customer record with comprehensive validation and duplicate checking*
-
-#### Customer Index
+#### Customer List View
+![Customer List](ScreenShots/Customer-list.png)
 *Customer listing and management with full CRUD operations and search functionality*
 
-#### Update Customer
+#### Create Customer
+![Create Customer](ScreenShots/Customer-create.png)
+*Creating a new customer record with comprehensive validation and duplicate checking*
+
+#### Edit Customer
+![Edit Customer](ScreenShots/customer-edit.png)
 *Editing customer information with real-time validation and error handling*
 
 #### Delete Customer
+![Delete Customer](ScreenShots/Customer-delete.png)
 *Customer deletion confirmation with safety checks and soft delete implementation*
-
-**Note:** Screenshots are available in the `Screenshots/` folder of this repository.
 
 ## 🆕 Recent Updates
 
