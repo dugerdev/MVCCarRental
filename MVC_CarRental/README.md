@@ -8,13 +8,16 @@ Built with **.NET 9.0** and modern web development practices.
 
 ## ✨ Key Features
 
-* **Comprehensive Management:** Easily manage customers (Create, Read, Update, Delete)
+* **Comprehensive CRUD Operations:** Complete customer management with Create, Read, Update, Delete functionality
 * **Entity-Based Domain Model:** Clean architecture with well-defined entities (Brand, Series, Vehicle, Customer, Employee, Office, Rental)
-* **Smart Data Validation:** Utilizes **FluentValidation** library for robust input validation
-* **Database-First Approach:** Entity Framework Core with SQL Server integration
-* **Modern UI:** Responsive Razor Views with clean user interface
+* **Smart Data Validation:** Advanced validation using **FluentValidation** with Turkish character support
+* **Database Seeding:** Automatic population of sample data for testing and demonstration
+* **Modern UI:** Responsive Razor Views with clean, user-friendly interface
 * **Scalable Architecture:** Maintainable ASP.NET Core MVC architecture following best practices
 * **Code-First Migrations:** Database schema management with EF Core migrations
+* **Audit Trail:** Built-in tracking of creation, update, and deletion timestamps
+* **Soft Delete Support:** Safe deletion with recovery capabilities
+* **Professional Code Quality:** Comprehensive XML documentation and clean code practices
 
 ---
 
@@ -49,11 +52,16 @@ The system is structured around the following main entities:
 
 ## 🧾 Validation Layer
 
-Validation rules are implemented with **FluentValidation** to guarantee consistent and secure data entry:
+Advanced validation rules implemented with **FluentValidation** for robust data integrity:
 
-* **Customer Validation:** Name format, email validation, phone number format
+* **Customer Validation:** 
+  - National ID: 11-digit Turkish format validation
+  - Names: Turkish character support with length validation
+  - Email: Comprehensive email format validation
+  - Phone: Turkish phone number format (+90 555 123 4567)
 * **Extensible Design:** Easy to add validation rules for other entities
 * **Server-Side Validation:** Ensures data integrity at the application level
+* **User-Friendly Messages:** Clear, descriptive error messages in English
 
 ---
 
@@ -145,21 +153,54 @@ MVC_CarRental/                 # Main ASP.NET Core MVC project
 
 ---
 
+## 🆕 Recent Updates
+
+### Version 2.0 - Code Quality & Documentation Improvements
+
+* **Enhanced Code Readability:**
+  - Comprehensive XML documentation for all classes and methods
+  - Organized code structure with regions and clear separation of concerns
+  - Improved variable naming and code formatting
+
+* **Advanced Validation:**
+  - Turkish character support in name validation
+  - Enhanced phone number format validation
+  - Improved error messages for better user experience
+
+* **Database Improvements:**
+  - Comprehensive database seeding with realistic sample data
+  - Support for 8 brands, 18 series, 18 vehicles, 15 customers, 5 employees, 5 offices, and 8 rentals
+  - Automatic data population on first run
+
+* **Professional Code Structure:**
+  - Helper methods for duplicate data checking
+  - Improved error handling and validation flow
+  - Better separation between create and update operations
+
+---
+
 ## 📸 Screenshots
 
 ### Customer Management Interface
 
-![Create Customer](ScreenShots/Create.png)
-*Creating a new customer record*
+![Create Customer](ScreenShots/Create-Customers.png)
+*Creating a new customer record with comprehensive validation*
 
-![Customer Index](ScreenShots/Index.png)
-*Customer listing and management*
+![Customer Index](ScreenShots/Customer-Index.png)
+*Customer listing and management with full CRUD operations*
 
-![Update Customer](ScreenShots/Update.png)
-*Editing customer information*
+![Update Customer](ScreenShots/Update-Customers.png)
+*Editing customer information with duplicate validation*
 
-![Delete Customer](ScreenShots/Delete.png)
-*Customer deletion confirmation*
+![Delete Customer](ScreenShots/Delete-Customers.png)
+*Customer deletion confirmation with safety checks*
+
+### Key Features Demonstrated
+
+- **Responsive Design:** Clean, modern interface that works on all devices
+- **Form Validation:** Real-time validation with user-friendly error messages
+- **Data Integrity:** Duplicate prevention for email, phone, and national ID
+- **Professional UI:** Bootstrap-based styling with intuitive navigation
 
 ## 🤝 Contributing
 
