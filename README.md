@@ -1,144 +1,169 @@
-# 🚗 MVC Car Rental: A Car Rental Management System
+# MVC Car Rental System
 
-**MVC Car Rental** is a comprehensive car rental management system developed using **ASP.NET MVC** and **Entity Framework**. This project provides a web-based solution for managing cars, customers, rental transactions, and users. It features integrated **FluentValidation** to enforce business rules and ensure data integrity.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![.NET](https://img.shields.io/badge/.NET-9.0-blue.svg)](https://dotnet.microsoft.com/download/dotnet/9.0)
+[![ASP.NET Core](https://img.shields.io/badge/ASP.NET%20Core-MVC-green.svg)](https://docs.microsoft.com/en-us/aspnet/core/)
 
----
+A comprehensive car rental management system built with .NET 9.0 MVC framework.
 
-## ✨ Key Features
+## 🚀 Features
 
-- **Comprehensive Management:** Easily manage customers, cars, and rental transactions (Create, Read, Update, Delete)
-- **Smart Search and Filtering:** Quickly search and filter cars by availability, category, and brand
-- **Role-Based Authorization:** Secure authentication and authorization for different user roles (administrators and customers)
-- **Robust Data Validation:** Utilizes the **FluentValidation** library to guarantee consistent and secure data entry
-- **Clean Architecture:** An entity-based domain model following clean architecture principles
-- **User-Friendly Interface:** A simple and interactive user interface built with **Razor Views**
-- **Scalable Architecture:** A maintainable and scalable **ASP.NET MVC** architecture
-
----
+- **Customer Management**: Full CRUD operations with validation
+- **Vehicle Management**: Brand, series, and vehicle tracking
+- **Employee Management**: Staff and office management
+- **Rental Operations**: Complete rental workflow
+- **Advanced Validation**: FluentValidation with Turkish character support
+- **Database Seeding**: Pre-populated with realistic sample data
+- **Responsive Design**: Modern, clean interface
 
 ## 🛠️ Tech Stack
 
-| Category | Technology | Description |
-|----------|------------|-------------|
-| **Framework** | ASP.NET MVC | Microsoft's popular Model-View-Controller framework for web applications |
-| **Language** | C# | The back-end logic of the project is written in C# |
-| **ORM** | Entity Framework | An Object-Relational Mapping (ORM) tool used for database operations |
-| **Validation** | FluentValidation | A library for building more readable and robust validation rules |
-| **Frontend** | Razor Views, HTML5, CSS3, JavaScript | Technologies used for the user interface and client-side interactions |
-| **Database** | Microsoft SQL Server | The relational database management system where all project data is stored |
-| **IDE** | Visual Studio 2022+ | The integrated development environment where the project is developed |
+- **.NET 9.0** - Latest framework version
+- **ASP.NET Core MVC** - Web application framework
+- **Entity Framework Core** - ORM for database operations
+- **SQL Server** - Database management
+- **FluentValidation** - Advanced validation rules
+- **Bootstrap** - Responsive UI framework
 
----
+## 📋 Prerequisites
 
-## 📂 Entities (Domain Models)
+- .NET 9.0 SDK
+- SQL Server (LocalDB or Express)
+- Visual Studio 2022 or VS Code
 
-The system is structured around the following main entities:
+## 🚀 Installation & Setup
 
-- **Car:** Represents vehicles available for rental (e.g., Model, Brand, Daily Price, License Plate)
-- **Customer:** Holds customer information (e.g., Name, Email, Phone Number)
-- **Rental:** Stores rental transactions and history (e.g., Start/End Date, Total Amount)
-- **User:** Manages application users (admins, customers, etc.)
-- **Category:** Organizes cars by type (e.g., Sedan, SUV, Hatchback)
-- **Brand:** Specifies the brand of the cars (e.g., BMW, Mercedes, Toyota)
-
----
-
-## 🧾 Validation Layer
-
-Validation rules are implemented with **FluentValidation** to guarantee consistent and secure data entry. Example validation rules include:
-
-- **Customer Details:** Validating the format of the name, email, and phone number
-- **Car Information:** Ensuring proper data format for license plates, daily prices, and model information
-- **Rental Transactions:** Validating rental dates, duration, and pricing calculations
-
----
-
-## 📂 Project Structure
-
-```
-MVC_CarRental.sln           # Solution file
-MVC_CarRental/              # Main ASP.NET MVC project
-├── Controllers/            # Application controllers
-├── Models/                 # Domain models (Car, Customer, Rental, etc.)
-├── Validators/             # FluentValidation classes
-├── Views/                  # Razor views (UI templates)
-├── Scripts/                # JavaScript files
-├── Content/                # CSS, images, and static assets
-└── Web.config              # Project configuration
-```
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Visual Studio 2022 (or later)
-- .NET Framework 4.7.2+
-- SQL Server (LocalDB or SQL Server Express)
-
-### Installation Steps
-
-1. **Clone this repository** to your local machine:
+1. **Clone the repository:**
    ```bash
-   git clone https://github.com/dugerdev/MVCCarRental.git
+   git clone https://github.com/dugerdev/MvcCarRental.git
+   cd MvcCarRental
    ```
 
-2. **Open the solution** in Visual Studio:
-   - Open the `MVC_CarRental.sln` file in Visual Studio
+2. **Navigate to project directory:**
+   ```bash
+   cd MVC_CarRental
+   ```
 
-3. **Restore NuGet packages**:
-   - Right-click on the solution → "Restore NuGet Packages"
-   - Or use: `Tools > NuGet Package Manager > Package Manager Console` → `Update-Package`
+3. **Restore dependencies:**
+   ```bash
+   dotnet restore
+   ```
 
-4. **Set up the database**:
-   - Update the SQL Server connection string in the `Web.config` file to match your database settings
-   - If using Entity Framework Code First approach, run the necessary migrations
+4. **Update database:**
+   ```bash
+   dotnet ef database update
+   ```
 
-5. **Build and run the project**:
-   - Press `Ctrl + F5` to start the application
-   - The application will open in your default browser
+5. **Run the application:**
+   ```bash
+   dotnet run
+   ```
 
----
+6. **Access the application:**
+   - Open your browser and navigate to `https://localhost:5001` or `http://localhost:5000`
 
-## 🔧 Usage
+## 📊 Database Schema
 
-### For Administrators
-- Manage all customers, cars, and rental transactions
-- View comprehensive reports and analytics
-- Configure system settings and user roles
+### Entities
 
-### For Customers
-- Browse available cars
-- Search and filter by category, brand, or price
-- View rental history and manage bookings
+- **BaseEntity**: Common properties (Id, IsDeleted, CreatedOn, UpdatedOn, DeletedOn)
+- **Customer**: Customer information with validation
+- **Vehicle**: Vehicle details with brand and series relationships
+- **Brand**: Vehicle manufacturer information
+- **Series**: Vehicle model information
+- **Employee**: Staff management
+- **Office**: Office locations
+- **Rental**: Rental transaction records
 
----
+### Sample Data
 
-## 🤝 Contributing
+The application comes with pre-seeded data:
+- 8 Brands (Toyota, BMW, Mercedes, etc.)
+- 18 Series (Corolla, X5, C-Class, etc.)
+- 18 Vehicles with various specifications
+- 15 Sample customers
+- 5 Employees
+- 5 Office locations
+- 8 Sample rental records
 
-Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
+## 📸 Screenshots
 
-1. Fork the repository
-2. Create a new branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+### 🎯 Application Interface Overview
 
----
-
-## 📄 License
-
-This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
-
----
-
-## 📞 Contact
-
-If you have any questions or suggestions, please feel free to:
-- Open an issue on GitHub
-- Contact the maintainer
+This section showcases the key features and user interface of the MVC Car Rental System. The screenshots demonstrate the complete customer management workflow with modern, responsive design.
 
 ---
 
-**MVC Car Rental** - Professional car rental management made simple! 🚗✨
+### 👥 Customer Management System
+
+#### 📋 Customer List View
+![Customer List](ScreenShots/Customer-list.png)
+*Comprehensive customer listing with search, filter, and management capabilities. Features include pagination, sorting, and quick action buttons for each customer record.*
+
+#### ➕ Create New Customer
+![Create Customer](ScreenShots/Customer-create.png)
+*Intuitive customer creation form with real-time validation, duplicate checking, and user-friendly error messages. The form includes comprehensive field validation for Turkish characters.*
+
+#### ✏️ Edit Customer Information
+![Edit Customer](ScreenShots/customer-edit.png)
+*Customer information editing interface with pre-populated fields, validation feedback, and seamless update functionality. Includes duplicate prevention and data integrity checks.*
+
+#### 🗑️ Delete Customer Confirmation
+![Delete Customer](ScreenShots/Customer-delete.png)
+*Safe customer deletion process with confirmation dialog, soft delete implementation, and audit trail maintenance. Ensures data integrity while providing user safety.*
+
+---
+
+### 🎨 UI/UX Features Demonstrated
+
+- **Modern Design**: Clean, professional interface with Bootstrap styling
+- **Responsive Layout**: Works seamlessly across desktop, tablet, and mobile devices
+- **Form Validation**: Real-time validation with clear error messaging
+- **User Feedback**: Intuitive success/error notifications
+- **Data Integrity**: Comprehensive validation and duplicate prevention
+- **Accessibility**: User-friendly interface with clear navigation
+
+---
+
+### 🔧 Technical Features Showcased
+
+- **CRUD Operations**: Complete Create, Read, Update, Delete functionality
+- **FluentValidation**: Advanced validation rules with Turkish character support
+- **Soft Delete**: Safe data deletion with audit trail
+- **Search & Filter**: Advanced data filtering and search capabilities
+- **Error Handling**: Comprehensive error management and user feedback
+
+## 🆕 Recent Updates
+
+### Version 2.0 - Code Quality & Documentation Improvements
+
+* **Enhanced Code Readability:**
+  - Comprehensive XML documentation for all classes and methods
+  - Organized code structure with regions and clear separation of concerns
+  - Improved variable naming and code formatting
+
+* **Advanced Validation:**
+  - Turkish character support in name validation
+  - Enhanced phone number format validation
+  - Improved error messages for better user experience
+
+* **Database Improvements:**
+  - Comprehensive database seeding with realistic sample data
+  - Support for 8 brands, 18 series, 18 vehicles, 15 customers, 5 employees, 5 offices, and 8 rentals
+  - Automatic data population on first run
+
+* **Professional Code Structure:**
+  - Helper methods for duplicate data checking
+  - Improved error handling and validation flow
+  - Better separation between create and update operations
+
+## 🔧 Key Features Demonstrated
+
+- **Responsive Design:** Clean, modern interface that works on all devices
+- **Form Validation:** Real-time validation with user-friendly error messages
+- **CRUD Operations:** Complete Create, Read, Update, Delete functionality
+- **Duplicate Prevention:** Advanced duplicate checking for customers
+- **Soft Delete:** Safe deletion with IsDeleted flag
+- **Audit Trail:** CreatedOn, UpdatedOn, DeletedOn tracking
+
+## 📁 Project Structure
