@@ -82,25 +82,6 @@ The application comes with pre-seeded data:
 - 5 Office locations
 - 8 Sample rental records
 
-## 📸 Screenshots
-
-### Customer Management Interface
-
-#### Create Customer
-![Create Customer](https://github.com/dugerdev/MvcCarRental/issues/1#issuecomment-create)
-*Creating a new customer record with comprehensive validation*
-
-#### Customer Index
-![Customer Index](https://github.com/dugerdev/MvcCarRental/issues/1#issuecomment-index)
-*Customer listing and management with full CRUD operations*
-
-#### Update Customer
-![Update Customer](https://github.com/dugerdev/MvcCarRental/issues/1#issuecomment-update)
-*Editing customer information with duplicate validation*
-
-#### Delete Customer
-![Delete Customer](https://github.com/dugerdev/MvcCarRental/issues/1#issuecomment-delete)
-*Customer deletion confirmation with safety checks*
 
 ## 🆕 Recent Updates
 
@@ -167,23 +148,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Contact
 
 For questions or support, please open an issue on GitHub.
-
----
-
-## 🚨 IMPORTANT: Screenshots Setup
-
-To add screenshots to this README:
-
-1. Go to [Issues](https://github.com/dugerdev/MvcCarRental/issues)
-2. Create a new issue titled "Screenshots"
-3. Upload your images by dragging and dropping them into the issue
-4. GitHub will generate URLs like: `https://user-images.githubusercontent.com/xxxxx/xxxxx.png`
-5. Replace the placeholder URLs in this README with the generated URLs
-
-**Screenshot files needed:**
-- Customer creation form
-- Customer listing page
-- Customer editing form
-- Customer deletion confirmation
-
-This method ensures screenshots display reliably on GitHub!
