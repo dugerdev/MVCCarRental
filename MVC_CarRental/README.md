@@ -183,16 +183,16 @@ MVC_CarRental/                 # Main ASP.NET Core MVC project
 
 ### Customer Management Interface
 
-![Create Customer](https://github.com/dugerdev/MVCCarRental/blob/master/MVC_CarRental/ScreenShots/Create-Customers.png)
+<img src="https://raw.githubusercontent.com/dugerdev/MVCCarRental/master/ScreenShots/Create-Customers.png" alt="Create Customer" width="800"/>
 *Creating a new customer record with comprehensive validation*
 
-![Customer Index](https://github.com/dugerdev/MVCCarRental/blob/master/MVC_CarRental/ScreenShots/Customer-Index.png)
+<img src="https://raw.githubusercontent.com/dugerdev/MVCCarRental/master/ScreenShots/Customer-Index.png" alt="Customer Index" width="800"/>
 *Customer listing and management with full CRUD operations*
 
-![Update Customer](https://github.com/dugerdev/MVCCarRental/blob/master/MVC_CarRental/ScreenShots/Update-Customers.png)
+<img src="https://raw.githubusercontent.com/dugerdev/MVCCarRental/master/ScreenShots/Update-Customers.png" alt="Update Customer" width="800"/>
 *Editing customer information with duplicate validation*
 
-![Delete Customer](https://github.com/dugerdev/MVCCarRental/blob/master/MVC_CarRental/ScreenShots/Delete-Customers.png)
+<img src="https://raw.githubusercontent.com/dugerdev/MVCCarRental/master/ScreenShots/Delete-Customers.png" alt="Delete Customer" width="800"/>
 *Customer deletion confirmation with safety checks*
 
 ### Key Features Demonstrated
