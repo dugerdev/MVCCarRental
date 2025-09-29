@@ -186,31 +186,20 @@ MVC_CarRental/                 # Main ASP.NET Core MVC project
 ### Customer Management Interface
 
 #### Create Customer
-![Create Customer](https://user-images.githubusercontent.com/placeholder/create-customers.png)
+![Create Customer](Screenshots/Customer-create.png)
 *Creating a new customer record with comprehensive validation*
 
 #### Customer Index  
-![Customer Index](https://user-images.githubusercontent.com/placeholder/customer-index.png)
+![Customer Index](Screenshots/Customer-list.png)
 *Customer listing and management with full CRUD operations*
 
 #### Update Customer
-![Update Customer](https://user-images.githubusercontent.com/placeholder/update-customers.png)
+![Update Customer](Screenshots/customer-edit.png)
 *Editing customer information with duplicate validation*
 
 #### Delete Customer
-![Delete Customer](https://user-images.githubusercontent.com/placeholder/delete-customers.png)
+![Delete Customer](Screenshots/Customer-delete.png)
 *Customer deletion confirmation with safety checks*
-
-**📝 Note:** Screenshots will be added after uploading to GitHub Issues. The placeholder URLs will be replaced with actual GitHub-hosted image links.
-
-**📁 Screenshots Klasörü:**
-Screenshots klasörüne aşağıdaki görselleri eklemeniz gerekiyor:
-- `customer-create.png` - Müşteri oluşturma formu
-- `customer-list.png` - Müşteri listesi sayfası  
-- `customer-edit.png` - Müşteri düzenleme formu
-- `customer-delete.png` - Müşteri silme onay sayfası
-
-**📝 Not:** Görseller eklendikten sonra README otomatik olarak güncellenecektir.
 
 ### Key Features Demonstrated
 
