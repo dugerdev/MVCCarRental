@@ -183,17 +183,26 @@ MVC_CarRental/                 # Main ASP.NET Core MVC project
 
 ### Customer Management Interface
 
-<img src="https://raw.githubusercontent.com/dugerdev/MVCCarRental/master/ScreenShots/Create-Customers.png" alt="Create Customer" width="800"/>
-*Creating a new customer record with comprehensive validation*
+### Screenshots will be added via GitHub Issues
 
-<img src="https://raw.githubusercontent.com/dugerdev/MVCCarRental/master/ScreenShots/Customer-Index.png" alt="Customer Index" width="800"/>
-*Customer listing and management with full CRUD operations*
+**To add screenshots:**
+1. Go to [Issues](https://github.com/dugerdev/MVCCarRental/issues)
+2. Create a new issue titled "Screenshots"
+3. Drag and drop the screenshot files from `ScreenShots/` folder
+4. GitHub will generate direct links
+5. Copy those links and update this README
 
-<img src="https://raw.githubusercontent.com/dugerdev/MVCCarRental/master/ScreenShots/Update-Customers.png" alt="Update Customer" width="800"/>
-*Editing customer information with duplicate validation*
+**Screenshot files available:**
+- `Create-Customers.png` - Customer creation form
+- `Customer-Index.png` - Customer listing page  
+- `Update-Customers.png` - Customer editing form
+- `Delete-Customers.png` - Customer deletion confirmation
 
-<img src="https://raw.githubusercontent.com/dugerdev/MVCCarRental/master/ScreenShots/Delete-Customers.png" alt="Delete Customer" width="800"/>
-*Customer deletion confirmation with safety checks*
+**Alternative: Direct file access**
+- [Create Customer Screenshot](ScreenShots/Create-Customers.png)
+- [Customer Index Screenshot](ScreenShots/Customer-Index.png)
+- [Update Customer Screenshot](ScreenShots/Update-Customers.png)
+- [Delete Customer Screenshot](ScreenShots/Delete-Customers.png)
 
 ### Key Features Demonstrated
 
