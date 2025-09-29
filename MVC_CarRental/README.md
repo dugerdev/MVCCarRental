@@ -82,6 +82,25 @@ The application comes with pre-seeded data:
 - 5 Office locations
 - 8 Sample rental records
 
+## 📸 Screenshots
+
+### Customer Management Interface
+
+The following screenshots demonstrate the key features of the customer management system:
+
+#### Create Customer
+*Creating a new customer record with comprehensive validation and duplicate checking*
+
+#### Customer Index
+*Customer listing and management with full CRUD operations and search functionality*
+
+#### Update Customer
+*Editing customer information with real-time validation and error handling*
+
+#### Delete Customer
+*Customer deletion confirmation with safety checks and soft delete implementation*
+
+**Note:** Screenshots are available in the `Screenshots/` folder of this repository.
 
 ## 🆕 Recent Updates
 
